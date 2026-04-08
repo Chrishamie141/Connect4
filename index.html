@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect 4 vs AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="game-card" aria-label="Connect 4 game container">
+      <header class="header">
+        <h1>Connect 4 vs AI</h1>
+        <p class="subtitle">You are <span class="chip red"></span> Red. AI is <span class="chip yellow"></span> Yellow.</p>
+      </header>
+
+      <section class="controls" aria-label="Game controls">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty" aria-label="Select AI difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="restartBtn" type="button">Restart Game</button>
+      </section>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score-item">
+          <span>Player Wins</span>
+          <strong id="playerScore">0</strong>
+        </div>
+        <div class="score-item">
+          <span>AI Wins</span>
+          <strong id="aiScore">0</strong>
+        </div>
+        <div class="score-item">
+          <span>Draws</span>
+          <strong id="drawScore">0</strong>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite">Your turn</p>
+
+      <section class="board-wrapper" aria-label="Connect 4 board area">
+        <div id="board" class="board" role="grid" aria-label="Connect 4 board"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
